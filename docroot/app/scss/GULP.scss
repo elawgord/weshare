@@ -1,0 +1,31 @@
+* {
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+// Змінні
+$col_1: #474747;
+$fz: 20px;
+body {
+  background-color: $col_1;
+}
+
+// Шаблони
+%layout {
+  color: red;
+  background-color: green;
+  font-size: 30px;
+}
+h2 {
+  @extend %layout;
+}
+
+// Міксіни
+@mixin fontz($fz, $cl, $fst) {
+  font-size: $fz;
+  color: $cl;
+  font-style: $fst;
+}
+
+h2 {
+  @include fontz(40px, red, italic);
+}
