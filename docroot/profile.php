@@ -1,8 +1,6 @@
 <?php
-  session_start();
-  if (!$_SESSION['user']) {
-    header('Location: /');
-  }
+require "db.php";
+$user = R::findOne('users', 'id = ?', array($_SESSION['logged_user']->id));
 
 ?>
 
@@ -11,7 +9,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Raccoon. Увійти або авторизуватись</title>
+    <title>WeShare. Увійти або авторизуватись</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -21,33 +19,35 @@
   </head>
   <body>
     <div class="wrapper">
-    <header class="header">
-      <div class="container">
-        <div class="header__inner">
-          <a class="logo" href="#">Raccoon</a>
+      <header class="header">
+        <div class="container">
+          <div class="header__inner">
+            <a class="logo" href="#">WeShare</a>
+          </div>
         </div>
-      </div>
-    </header>
+      </header>
       <div class="container">
         <main class="main">
           <div class="main__inner">
-          <div class="main__title">
-          <div class="title">Профіль</div>
-          </div>
-            <form>
-              <img src="<?= $_SESSION['user']['avatar'] ?>" width="200" alt="image">
-              <h2><?= $_SESSION['user']['name'] ?></h2>
-              <a href="#"><?= $_SESSION['user']['email'] ?></a>
-              <a href="vendor/logout.php">Вийти</a>
+            <div class="main__title">
+              <div class="title">Профіль</div>
+            </div>
+            <form class="main__form">
+            <p class="main__profile"><?php echo $user->name. ' ' .$user->email; ?></p>
+            <input
+                  class="main__button"
+                  type="button"
+                  onclick="window.location.href = 'logout.php';"
+                  value="Вийти" />
             </form>
           </div>
         </main>
       </div>
       <footer class="footer">
         <div class="footer__down">
-          <a class="footer__logo" href="#">Raccoon</a>
+          <a class="footer__logo" href="#">WeShare</a>
+        </div>
       </footer>
-      </div>
+    </div>
   </body>
-</div>
 </html>

@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "gulp": "^4.0.2",
+    "hulp": "^0.0.1-security"
+  }
+}
