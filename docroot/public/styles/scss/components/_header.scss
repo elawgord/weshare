@@ -1,0 +1,23 @@
+.header {
+  background-color: $header;
+  position: fixed;
+  width: 100%;
+  border-bottom: $border_Set;
+  &__logo-item {
+    display: flex;
+    width: auto;
+  }
+  &__logo {
+    color: $text_Header;
+    font-size: 25px;
+    font-weight: 800;
+  }
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    height: 53px;
+    padding: 0 10px 0 10px;
+  }
+}

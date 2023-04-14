@@ -1,0 +1,116 @@
+.signupin {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 200px;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: $window;
+    width: 400px;
+    height: 100%;
+    padding: 25px;
+    border: $border_Set;
+    border-radius: $border_Radius;
+  }
+  &__top {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-bottom: 20px;
+    padding-left: 10px;
+  }
+
+  &__title {
+    color: $text_Main;
+    font-size: 21px;
+    font-weight: 600;
+    padding-bottom: 5px;
+  }
+  &__subtitle-item {
+    display: flex;
+    align-items: center;
+    color: $text_Main;
+  }
+  &__place {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 15px;
+  }
+  &__place-input {
+    width: 100%;
+    height: 40px;
+    border: $border_Set;
+    border-radius: $border_Radius;
+    padding-left: 25px;
+    font-size: 15px;
+    &:hover {
+      background-color: $background_Main;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+  &__place-input + .form__place-input {
+    margin-top: 10px;
+  }
+  &__item-btn {
+    display: flex;
+    margin: 10px 0 20px 0;
+  }
+  &__item-submit {
+    @include longButton-login;
+  }
+  &__down {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+  &__down-item {
+    display: flex;
+  }
+  &__down-question {
+    display: flex;
+    align-items: center;
+    color: $text_Main;
+    padding-right: 12px;
+  }
+  &__link {
+    display: flex;
+  }
+  &__link-redirect {
+    @include redirectButton-login;
+  }
+}
+
+.msg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: fit-content;
+  max-width: 350px;
+  &__item-red {
+    max-width: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $msg_Red;
+  }
+  &__item-green {
+    max-width: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $msg_Green;
+  }
+  
+}

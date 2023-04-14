@@ -1,0 +1,106 @@
+@mixin longButton-login {
+  display: block;
+  height: fit-content;
+  width: 100%;
+  color: $button_Text_Color;
+  background-color: $button_Main;
+  font-size: 17px;
+  font-weight: 600;
+  padding: 7px;
+  letter-spacing: 0.01em;
+  border-radius: $border_Radius;
+  cursor: pointer;
+  &:hover {
+    background-color: $button_Hover;
+    transition: all 200ms ease-in-out;
+  }
+}
+
+@mixin redirectButton-login {
+  display: block;
+  height: fit-content;
+  width: fit-content;
+  color: $text_Redirect_Button;
+  background-color: $button_Redirect;
+  font-size: 17px;
+  font-weight: 600;
+  padding: 7px 15px;
+  letter-spacing: 0.01em;
+  border-radius: $border_Radius;
+  cursor: pointer;
+  &:hover {
+    background-color: $button_Redirect_Hover;
+    transition: all 200ms ease-in-out;
+    }
+  }
+
+
+@mixin button-set-main {
+  display: block;
+  height: fit-content;
+  width: fit-content;
+  color: $button_Text_Color;
+  background-color: $button_Main;
+  padding: 7px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  border-radius: $border_Radius;
+  cursor: pointer;
+  &:hover {
+    background-color: $button_Hover;
+    transition: all 200ms ease-in-out;
+  }
+}
+
+@mixin button-share {
+  display: block;
+  height: fit-content;
+  width: 20%;
+  color: $button_Text_Color;
+  background-color: $button_Main;
+  padding: 5px;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  border-radius: $border_Radius;
+  cursor: pointer;
+  &:hover {
+    background-color: $button_Hover;
+    transition: all 200ms ease-in-out;
+  }
+}
+
+@mixin button_Secondary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  height: fit-content;
+  padding: 0 7px 0 0;
+  color: $nav_Button;
+  border-radius: $border_Radius;
+  font-size: 15px;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  &:hover {
+    transition: all 200ms ease-in-out;
+    background-color: $border_Main;
+    color: $nav_Text_Hover;
+  }
+}
+
+@mixin button_Nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  height: fit-content;
+  color: $nav_Button;
+  font-size: 18px;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  &:hover {
+    transition: all 200ms ease-in-out;
+    color: $nav_Text_Hover;
+  }
+}

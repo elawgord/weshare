@@ -1,0 +1,19 @@
+@import "vendor/vars";
+@import "vendor/fonts";
+@import "vendor/reset";
+@import "vendor/libs";
+@import "vendor/global";
+@import "vendor/mixins";
+
+// Великі елементи
+@import "components/header.scss";
+@import "components/login.scss";
+@import "components/index.scss";
+@import "components/profile.scss";
+@import "components/friends.scss";
+
+
+// Невеликі елементи
+@import "components/_nav.scss";
+@import "components/_aside.scss";
+@import "components/_errorPage.scss";

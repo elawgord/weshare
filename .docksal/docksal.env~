@@ -1,2 +1,3 @@
 DOCKSAL_STACK="default-nodb"
 DB_IMAGE="docksal/db:1.1-mysql-8.0"
+sql_mode="”

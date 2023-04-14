@@ -1,0 +1,142 @@
+.allcontent {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  height: auto;
+  padding-top: 77px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 20px;
+  max-width: 810px;
+  height: auto;
+}
+
+.share {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  background-color: $window;
+  border: $border_Set;
+  border-radius: $border_Radius;
+  height: 120px;
+  padding: 20px;
+  &__image {
+    display: flex;
+    border-radius: 50%;
+    justify-content: center;
+    object-fit: cover;
+    width: 60px;
+    height: 60px;
+    border: $border_Set;
+  }
+  &__form {
+    display: flex;
+    height: 70px;
+    width: 570px;
+    margin: 20px;
+    border: $border_Set;
+    border-radius: $border_Radius; 
+    font-size: 18px;
+    &:hover {
+      background-color: $background_Main;
+    }
+  }
+  &__share-text {
+    display: flex;
+  }
+  &__form-textarea {
+    display: flex;
+    width: 100%;
+    font-size: 14px;
+    padding: 10px 10px;
+    line-height: 20px;
+    resize: none;
+    &:focus {
+      outline: none !important;
+      border: 1px solid $text_window;
+      border-radius: $border_Radius; 
+  }
+  }
+  &__button {
+    @include button-share;
+  }
+}
+
+.border {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0 20px 0;
+  &__item {
+    width: 99%;
+    height: 1px;
+    background-color: $border_Line;
+  }
+}
+
+.post {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: $window;
+  border: $border_Set;
+  border-radius: $border_Radius;
+  height: auto;
+  padding: 20px 20px 0 20px;
+  &__header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+  &__header-image {
+    display: flex;
+    border-radius: 50%;
+    justify-content: center;
+    object-fit: cover;
+    width: 60px;
+    height: 60px;
+    border: $border_Set;
+  }
+  &__header-title {
+    display: flex;
+    flex-direction: column;
+    padding-left: 18px;
+  }
+  &__header-name {
+    display: flex;
+    color: $text_Main;
+    font-size: 20px;
+    font-weight: 600;
+    max-width: 200px;
+    padding-bottom: 3px;
+  }
+  &__header-time {
+    display: flex;
+    color: $text_Main;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  &__text {
+    display: flex;
+    color: black;
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 10px;
+    font-family: $post_font;
+  }
+  &__buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-top: 15px;
+  }
+  &__btn {
+      @include button_Secondary;
+    }
+}

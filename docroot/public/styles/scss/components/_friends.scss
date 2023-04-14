@@ -1,0 +1,64 @@
+.friendbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+}
+
+.friends {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: $window;
+    border: $border_Set;
+    border-radius: $border_Radius;
+    height: 200px;
+    padding: 20px;
+    width: 500px;
+    &__img {
+    display: flex;
+    }
+    &__image {
+    display: flex;
+    justify-content: center;
+    margin-left: 10px;
+    border-radius: 50%;
+    object-fit: cover;
+    width: 120px;
+    height: 120px;
+    border: $border_Set;
+    }
+    &__namebtn {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-left: 20px;
+    }
+    &__name-item {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    height: 40px;
+    }
+    &__name {
+    display: flex;
+    color: $text_Black;
+    font-size: 20px;
+    font-weight: 600;
+    &:hover {
+    border-bottom: 1px solid $text_Black;
+    transition: all 200ms ease-in-out;
+    }
+    &__button-item {
+        display: flex;
+    }
+    }
+    &__button {
+    @include button_Secondary;
+    font-size: 13px;
+    font-weight: 600;
+    }
+
+}

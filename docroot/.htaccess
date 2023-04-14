@@ -1,4 +1,7 @@
+AddDefaultCharset utf-8
+
+# Переадресація на index.php при введенній будь-якого посилання після index.php
 RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME}\.php -f
-RewriteRule ^(.*)$ $1.php
+RewriteRule ^(.*)$ index.php
